@@ -1,0 +1,13 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+header {
+    background: red;
+    display: flex;
+    justify-content: space-between;
+}
+.options {
+    display: flex;
+    padding-right: 30px;
+}
