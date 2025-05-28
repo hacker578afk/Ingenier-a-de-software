@@ -39,7 +39,7 @@ class loginClienteController
             $operador = $login->autentificarOperador($email);
 
             if ($operador && $operador['Contrasena'] === $contrasena) {
-                $_SESSION['idUsuario'] = $operador['IdOperadores'];
+                $_SESSION['idUsuario'] = $operador['IdOperador'];
                 $_SESSION['nombre'] = $operador['Nombres'];
                 $_SESSION['tipo'] = 'Operador';
                 $_SESSION['rol'] = $operador['IdTiposOperador'];
@@ -49,16 +49,16 @@ class loginClienteController
                         header('Location: ../../Vista/Operadores/Gerente/dashboardGerente.php');
                         break;
                     case 2:
-                        header('Location: ../../Vista/Mesero/Operadores/dashboardMesero.php');
+                        header('Location: ../../Vista/Operadores/Mesero/mesero_inicio.php');
                         break;
                     case 3:
-                        header('Location: ../../Vista/Cajero/dashboardCajero.php');
+                        header('Location: ../Operadores/CajeroController.php?accion=caja');
                         break;
                     case 4:
-                        header('Location: ../../Vista/Chef/dashboardChef.php');
+                        header('Location: ../Operadores/CocineroController.php?accion=Cocinero');
                         break;
                     case 5:
-                        header('Location: ../../Vista/Recepcionista/dashboardRecepcionista.php');
+                        header('Location: ../Operadores/RecepcionistaController.php?accion=reservaciones');
                         break;
                     default:
                         $_SESSION['login_error'] = 'Tipo de operador no válido.';
