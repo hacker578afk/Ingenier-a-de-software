@@ -15,7 +15,7 @@
             <p>Costo: <?= $comanda['Total'] ?></p>
             <p>Metodo de pago:</p>
             <a href="CajeroController.php?accion=pagoEfectivo&id=<?= $comanda['IdComanda'] ?>">Efectivo</a>
-            <a href="CajeroController?accion=pagoTarjeta&id=<?= $comanda['IdComanda'] ?>">Tarjeta</a>
+            <a href="CajeroController.php?accion=pagoTarjeta&id=<?= $comanda['IdComanda'] ?>&monto=<?=$comanda['Total']?>">Tarjeta</a>
 
         </div>
     <?php endforeach; ?>

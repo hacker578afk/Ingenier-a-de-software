@@ -258,7 +258,8 @@ unset($_SESSION['success_message'], $_SESSION['error_message']);
                 </div>
             </a>
             
-            <a href="nuevo-pedido.php" class="action-card order-card">
+      <a href="/IGourmet/Gourmet/Controlador/Clientes/clienteControlador.php?action=crearComanda" class="action-card order-card">
+
                 <div class="card-icon">
                     🛒
                 </div>

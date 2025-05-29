@@ -23,7 +23,7 @@ class meseroModelo
 
     public function insertarComanda($datosComanda)
     {
-        $stmt = $this->db->prepare("INSERT INTO Comanda (IdOperador, Estado, Total) VALUES (:idMesero, '1',:Total )");
+        $stmt = $this->db->prepare("INSERT INTO Comanda (IdOperador, Estado, Total) VALUES (:idMesero, '0',:Total )");
         $stmt->bindParam(':idMesero', $_SESSION['idUsuario']);
         $stmt->bindValue(':Total', $datosComanda['total'] ?? 0);
         $stmt->execute();
